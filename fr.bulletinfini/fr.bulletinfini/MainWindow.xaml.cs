@@ -28,5 +28,23 @@ namespace fr.bulletinfini
             WMatiere m = new WMatiere();
             m.Show();
         }
+
+        private void OnClick(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog Browser = new Microsoft.Win32.OpenFileDialog();
+            Browser.Title = "Selectionner votre fichier de données";
+            Browser.DefaultExt = ".json";
+            Nullable<bool> result = Browser.ShowDialog();
+            if (result == true)
+            {
+                string filename = Browser.FileName;
+                MessageBox.Show(filename);
+            }
+        }
+
+        private void Click_GenerateNewFile(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

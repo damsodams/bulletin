@@ -13,12 +13,16 @@ namespace fr.bulletinfini.Classes
         public int Id { get; set; }
 
         [JsonProperty("intitule")]
-        public String Intitule { get; set; }
+        public String intitule { get; set; }
 
         [JsonProperty("date")]
         public String Date { get; set; }
+        [JsonProperty("matiere_promotions")]
+        public List<Matiere_Promotion> Matiere_Promotions { get; set; }
 
-        [JsonProperty("liste_eleve")]
-        public List<Eleve> Eleve { get; set; }
+        [JsonProperty("liste_eleves")]
+        public List<Eleve> Eleves { get; set; }
+
+        public Promotion() {}
     }
 }

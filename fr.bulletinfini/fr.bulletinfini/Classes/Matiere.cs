@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace fr.bulletinfini.Classes
 {
-    class Matiere
+    public class Matiere
     {
         [JsonProperty("id")]
         public int Id { get; set; }
@@ -15,7 +15,8 @@ namespace fr.bulletinfini.Classes
         public string Nom { get; set; }
         [JsonProperty("type")]
         public string Type { get; set; }
-
+        [JsonProperty("matiere_promotions")]
+        public List<Matiere_Promotion> matiere_promotions { get; set; }
         public Matiere(int id, string nom, string type)
         {
             Id = id;

@@ -21,7 +21,8 @@ namespace fr.bulletinfini.Classes
         [JsonProperty("promotion_etudiant")]
         public Promotion Promotion { get; set; }
 
-      //  [JsonProperty("notes_etudiant")]
+        [JsonProperty("notes_etudiant")]
+        public List<Note> Notes { get; set; }
         public Eleve() { }
 
     }

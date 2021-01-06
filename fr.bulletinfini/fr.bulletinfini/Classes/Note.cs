@@ -7,24 +7,21 @@ using System.Threading.Tasks;
 
 namespace fr.bulletinfini.Classes
 {
-    class Note
+    public class Note
     {
         [JsonProperty("id")]
         public int Id { get; set; }
         [JsonProperty("coefficient")]
         public string Coefficient { get; set; }
-        [JsonProperty("notes")]
-        public string Notes { get; set; }
 
         [JsonProperty("liste_matiere")]
-        public List<Matiere> Matiere { get; set; }
+        public List<Matiere> Matieres { get; set; }
 
         [JsonProperty("liste_promotion")]
-        public List<Promotion> Promotion { get; set; }
-        public Note()
-        {
-
-        }
+        public List<Promotion> Promotions { get; set; }
+        [JsonProperty("eleve")]
+        public Eleve Eleve { get; set; }
+        public Note(){ }
     }
     
 }
