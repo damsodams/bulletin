@@ -72,6 +72,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\Matiere.cs" />
+    <Compile Include="Classes\Note.cs" />
     <Compile Include="Vues\WPromo.xaml.cs">
       <DependentUpon>WPromo.xaml</DependentUpon>
     </Compile>
