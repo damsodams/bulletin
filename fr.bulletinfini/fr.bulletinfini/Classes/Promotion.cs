@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +9,16 @@ namespace fr.bulletinfini.Classes
 {
     public class Promotion
     {
-        public int id { get; set; }
-        public String intitule { get; set; }
-        public DateTime date { get; set; }
+        [JsonProperty("id")]
+        public int Id { get; set; }
 
-        public List<Eleve> eleves { get; set; }
+        [JsonProperty("intitule")]
+        public String Intitule { get; set; }
+
+        [JsonProperty("date")]
+        public String Date { get; set; }
+
+        [JsonProperty("liste_eleve")]
+        public List<Eleve> Eleve { get; set; }
     }
 }
