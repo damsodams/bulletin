@@ -1,4 +1,5 @@
-﻿using MahApps.Metro.Controls;
+﻿using fr.bulletinfini.Classes;
+using MahApps.Metro.Controls;
 using System.Collections.Generic;
 
 namespace Bulletinfini
@@ -13,13 +14,13 @@ namespace Bulletinfini
             public WMatiere()
             {
                 InitializeComponent();
-             /*   List<Test> matiere = new List<Test>();
-                matiere.Add(new Test(1, "Java", "Matière"));
-                matiere.Add(new Test(2, "Anglais", "Matière"));
-                matiere.Add(new Test(3, "Management", "Matière"));
-                matiere.Add(new Test(4, "Réseaux", "Catégorie"));
+                List<Matiere> matiere = new List<Matiere>();
+                matiere.Add(new Matiere(1, "Java", "Matière"));
+                matiere.Add(new Matiere(2, "Anglais", "Matière"));
+                matiere.Add(new Matiere(3, "Management", "Matière"));
+                matiere.Add(new Matiere(4, "Réseaux", "Catégorie"));
 
-                TableMatiere.ItemsSource = matiere;*/
+                TableMatiere.ItemsSource = matiere;
             }
         }
      

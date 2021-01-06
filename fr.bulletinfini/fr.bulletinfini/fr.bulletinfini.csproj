@@ -68,6 +68,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes\Matiere.cs" />
     <Compile Include="Vues\WPromo.xaml.cs">
       <DependentUpon>WPromo.xaml</DependentUpon>
     </Compile>

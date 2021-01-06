@@ -12,7 +12,7 @@ namespace fr.bulletinfini.Classes
         public string Nom { get; set; }
         public string Type { get; set; }
 
-        public Test(int id, string nom, string type)
+        public Matiere(int id, string nom, string type)
         {
             Id = id;
             Nom = nom;

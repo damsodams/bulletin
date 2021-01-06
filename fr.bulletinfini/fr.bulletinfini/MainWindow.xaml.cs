@@ -1,4 +1,5 @@
-﻿using MahApps.Metro.Controls;
+﻿using Bulletinfini;
+using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,8 @@ namespace fr.bulletinfini
         public MainWindow()
         {
             InitializeComponent();
+            WMatiere m = new WMatiere();
+            m.Show();
         }
     }
 }
