@@ -1,9 +1,5 @@
 ﻿using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace fr.bulletinfini.Classes
 {
@@ -24,7 +20,7 @@ namespace fr.bulletinfini.Classes
         public List<Promotion> Promotions { get; set; }
         [JsonProperty("eleve")]
         public Eleve Eleve { get; set; }
-        public Note(){ }
+        public Note() { }
     }
-    
+
 }

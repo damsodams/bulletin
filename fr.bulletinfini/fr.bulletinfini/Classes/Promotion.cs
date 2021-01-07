@@ -1,9 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace fr.bulletinfini.Classes
 {
@@ -23,6 +20,13 @@ namespace fr.bulletinfini.Classes
         [JsonProperty("liste_eleves")]
         public List<Eleve> Eleves { get; set; }
 
-        public Promotion() {}
+        public Promotion() { }
+
+        public Promotion(int id, string intitule, string date)
+        {
+            Id = id;
+            Intitule = intitule;
+            Date = date;
+        }
     }
 }

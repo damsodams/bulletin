@@ -9,19 +9,19 @@ namespace Bulletinfini
     /// </summary>
     public partial class WMatiere : MetroWindow
     {
-            // InitializeComponent();
+        // InitializeComponent();
 
-            public WMatiere()
-            {
-                InitializeComponent();
-                List<Matiere> matiere = new List<Matiere>();
-                matiere.Add(new Matiere(1, "Java", "Matière"));
-                matiere.Add(new Matiere(2, "Anglais", "Matière"));
-                matiere.Add(new Matiere(3, "Management", "Matière"));
-                matiere.Add(new Matiere(4, "Réseaux", "Catégorie"));
+        public WMatiere()
+        {
+            InitializeComponent();
+            List<Matiere> matiere = new List<Matiere>();
+            matiere.Add(new Matiere(1, "Java", "Matière"));
+            matiere.Add(new Matiere(2, "Anglais", "Matière"));
+            matiere.Add(new Matiere(3, "Management", "Matière"));
+            matiere.Add(new Matiere(4, "Réseaux", "Catégorie"));
 
-                TableMatiere.ItemsSource = matiere;
-            }
+            TableMatiere.ItemsSource = matiere;
         }
-     
     }
+
+}

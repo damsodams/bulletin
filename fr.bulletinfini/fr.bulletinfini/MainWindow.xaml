@@ -36,6 +36,6 @@
                 <Image  Source="upload.png"/>
             </Button.Content>
         </Button>
-        <TextBlock Grid.Row="1" Text="Upload your JSON" FontSize="25" HorizontalAlignment="Center" FontFamily="Berlin Sans FB"/>
+        <TextBlock Grid.Row="1" Text="Upload your JSON" FontSize="25" HorizontalAlignment="Center" FontFamily="Berlin Sans FB" />
     </Grid>
 </mah:MetroWindow>

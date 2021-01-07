@@ -1,19 +1,10 @@
 ﻿using Bulletinfini;
+using fr.bulletinfini.Classes;
+using fr.bulletinfini.Vues;
 using MahApps.Metro.Controls;
+using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace fr.bulletinfini
 {
@@ -25,8 +16,8 @@ namespace fr.bulletinfini
         public MainWindow()
         {
             InitializeComponent();
-            WMatiere m = new WMatiere();
-            m.Show();
+            WNote n = new WNote();
+            n.Show();
         }
 
         private void OnClick(object sender, RoutedEventArgs e)
@@ -34,16 +25,25 @@ namespace fr.bulletinfini
             Microsoft.Win32.OpenFileDialog Browser = new Microsoft.Win32.OpenFileDialog();
             Browser.Title = "Selectionner votre fichier de données";
             Browser.DefaultExt = ".json";
+            Browser.Filter = "Json Files (*.json)|*.json";
+            Browser.FilterIndex = 1;
+
             Nullable<bool> result = Browser.ShowDialog();
             if (result == true)
             {
-                string filename = Browser.FileName;
-                MessageBox.Show(filename);
+                Promotion deserializedProduct = JsonConvert.DeserializeObject<Promotion>(System.IO.File.ReadAllText(Browser.FileName));
+                Console.WriteLine(deserializedProduct);
+                //List<Promotion> deserializedProduct = JsonConvert.DeserializeObject<List<Promotion>>(output);
             }
         }
 
         private void Click_GenerateNewFile(object sender, RoutedEventArgs e)
         {
+            Promotion p1 = new Promotion(1, "ASI 2019-2021", "2019-2021");
+            string json = JsonConvert.SerializeObject(p1, Formatting.Indented);
+            Promotion deserializedProduct = JsonConvert.DeserializeObject<Promotion>(json);
+
+            Console.WriteLine(json);
 
         }
     }
