@@ -13,10 +13,10 @@ namespace fr.bulletinfini.Classes
         public int Id { get; set; }
 
         [JsonProperty("nom")]
-        public String nom { get; set; }
+        public String Nom { get; set; }
 
         [JsonProperty("prenom")]
-        public String prenom { get; set; }
+        public String Prenom { get; set; }
 
         [JsonProperty("promotion_etudiant")]
         public Promotion Promotion { get; set; }

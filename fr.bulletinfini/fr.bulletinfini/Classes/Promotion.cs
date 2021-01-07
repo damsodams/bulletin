@@ -13,7 +13,7 @@ namespace fr.bulletinfini.Classes
         public int Id { get; set; }
 
         [JsonProperty("intitule")]
-        public String intitule { get; set; }
+        public String Intitule { get; set; }
 
         [JsonProperty("date")]
         public String Date { get; set; }

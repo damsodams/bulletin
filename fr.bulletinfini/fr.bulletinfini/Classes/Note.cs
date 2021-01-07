@@ -14,6 +14,9 @@ namespace fr.bulletinfini.Classes
         [JsonProperty("coefficient")]
         public string Coefficient { get; set; }
 
+        [JsonProperty("note")]
+        public float NoteEleve { get; set; }
+
         [JsonProperty("liste_matiere")]
         public List<Matiere> Matieres { get; set; }
 
