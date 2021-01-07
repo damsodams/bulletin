@@ -170,9 +170,6 @@
     <Compile Include="Vues\WAccueil.xaml.cs">
       <DependentUpon>WAccueil.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Vues\WGenerate.xaml.cs">
-      <DependentUpon>WGenerate.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Vues\WPromo.xaml.cs">
       <DependentUpon>WPromo.xaml</DependentUpon>
     </Compile>
@@ -194,10 +191,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Vues\WAccueil.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Vues\WGenerate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
