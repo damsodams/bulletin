@@ -22,5 +22,11 @@ namespace fr.bulletinfini.Classes
         public List<Note> Notes { get; set; }
         public Eleve() { }
 
+        public Eleve(int id, string nom, string prenom)
+        {
+            Id = id;
+            Nom = nom;
+            Prenom = prenom;
+        }
     }
 }
