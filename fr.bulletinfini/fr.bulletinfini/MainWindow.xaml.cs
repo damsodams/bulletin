@@ -9,6 +9,7 @@ using Microsoft.Win32;
 
 using System.Windows.Navigation;
 using MenuItem = fr.bulletinfini.Classes.MenuItem;
+using Newtonsoft.Json;
 
 namespace fr.bulletinfini
 {
@@ -34,40 +35,13 @@ namespace fr.bulletinfini
         {
             if (e.InvokedItem is MenuItem menuItem && menuItem.IsNavigation)
             {
-                try
-                {
-                    //Test de deserialization
-                    List <Promotion> deserializedProduct = JsonConvert.DeserializeObject<List<Promotion>>(System.IO.File.ReadAllText(Browser.FileName));
-                    //Sauvegarde du chemin
-                    GenerateConfigurationFile(Browser.FileName);
-                    //Copy du json en local 
-                    System.IO.File.WriteAllText(@Directory.GetCurrentDirectory() + "\\jsondb.json", System.IO.File.ReadAllText(Browser.FileName));
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Le fichier fourni est corompu, \n Merci de forunir un Fichier valide", "Erreur", MessageBoxButton.OK);
-                }
+             
                 this.navigationServiceEx.Navigate(menuItem.NavigationDestination);
             }
         }
 
         private void NavigationServiceEx_OnNavigated(object sender, NavigationEventArgs e)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Title = "Séléctionner l'emplacement du fichier";
-            saveFileDialog.DefaultExt = ".json";
-            saveFileDialog.Filter = "Json Files (*.json)|*.json";
-            saveFileDialog.FileName = "bddjson.json";
-            saveFileDialog.FilterIndex = 1;
-            Nullable<bool> result = saveFileDialog.ShowDialog();
-            if(result == true)
-            {
-                GenerateConfigurationFile(saveFileDialog.FileName);
-                // Appel de la novelle page
-            }
-            test();
-        }
-            // select the menu item
             this.HamburgerMenuControl.SelectedItem = this.HamburgerMenuControl
                                                          .Items
                                                          .OfType<MenuItem>()
@@ -76,6 +50,8 @@ namespace fr.bulletinfini
                                                                 .OptionsItems
                                                                 .OfType<MenuItem>()
                                                                 .FirstOrDefault(x => x.NavigationDestination == e.Uri);
+        }
+           
 
         private void test()
         {
@@ -145,5 +121,40 @@ namespace fr.bulletinfini
         {
             this.navigationServiceEx.GoBack();
         }
+        /*   try
+                {
+                    //Test de deserialization
+                    List <Promotion> deserializedProduct = JsonConvert.DeserializeObject<List<Promotion>>(System.IO.File.ReadAllText(Browser.FileName));
+                    //Sauvegarde du chemin
+                    GenerateConfigurationFile(Browser.FileName);
+                    //Copy du json en local 
+                    System.IO.File.WriteAllText(@Directory.GetCurrentDirectory() + "\\jsondb.json", System.IO.File.ReadAllText(Browser.FileName));
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Le fichier fourni est corompu, \n Merci de forunir un Fichier valide", "Erreur", MessageBoxButton.OK);
+                }
+        *
+        **
+        **
+        **
+        **
+        **
+        **
+        **
+         SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Title = "Séléctionner l'emplacement du fichier";
+            saveFileDialog.DefaultExt = ".json";
+            saveFileDialog.Filter = "Json Files (*.json)|*.json";
+            saveFileDialog.FileName = "bddjson.json";
+            saveFileDialog.FilterIndex = 1;
+            Nullable<bool> result = saveFileDialog.ShowDialog();
+            if(result == true)
+            {
+                GenerateConfigurationFile(saveFileDialog.FileName);
+                // Appel de la novelle page
+            }
+            test();*/
+
     }
 }
