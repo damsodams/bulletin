@@ -168,12 +168,26 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\Matiere.cs" />
-    <Compile Include="Classes\Matiere_Promotion.cs" />
     <Compile Include="Classes\MenuItem.cs" />
     <Compile Include="Classes\NavigationServiceEx.cs" />
     <Compile Include="Classes\Note.cs" />
     <Compile Include="Core\JsonDb.cs" />
     <Compile Include="Classes\ShellViewModel.cs" />
+    <Compile Include="Vues\PHome.xaml.cs">
+      <DependentUpon>PHome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vues\PMatiere.xaml.cs">
+      <DependentUpon>PMatiere.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vues\PNote.xaml.cs">
+      <DependentUpon>PNote.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vues\PPromo.xaml.cs">
+      <DependentUpon>PPromo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vues\PSauvegarde.xaml.cs">
+      <DependentUpon>PSauvegarde.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Vues\Test.xaml.cs">
       <DependentUpon>Test.xaml</DependentUpon>
     </Compile>
@@ -203,6 +217,26 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Vues\PHome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vues\PMatiere.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vues\PNote.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vues\PPromo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vues\PSauvegarde.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Vues\Test.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

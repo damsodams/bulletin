@@ -22,39 +22,39 @@ namespace fr.bulletinfini.Classes
             {
                 Icon = new PackIconFontAwesome() { Kind = PackIconFontAwesomeKind.HomeSolid },
                 Label = "Accueil",
-                NavigationType = typeof(WAccueil),
-                NavigationDestination = new Uri("Vues/WAccueil.xaml", UriKind.RelativeOrAbsolute)
+                NavigationType = typeof(PHome),
+                NavigationDestination = new Uri("Vues/PHome.xaml", UriKind.RelativeOrAbsolute)
             });
             this.Menu.Add(new MenuItem()
             {
                 Icon = new PackIconFontAwesome() { Kind = PackIconFontAwesomeKind.UserGraduateSolid },
                 Label = "Promotion",
-                NavigationType = typeof(WPromo),
-                NavigationDestination = new Uri("Vues/WPromo.xaml", UriKind.RelativeOrAbsolute)
+                NavigationType = typeof(PPromo),
+                NavigationDestination = new Uri("Vues/PPromo.xaml", UriKind.RelativeOrAbsolute)
             });
             this.Menu.Add(new MenuItem() 
             {
                 Icon = new PackIconFontAwesome() { Kind = PackIconFontAwesomeKind.ChalkboardTeacherSolid },
-                Label = "Awesome",
-                NavigationType = typeof(WMatiere),
-                NavigationDestination = new Uri("Vues/WMatiere.xaml", UriKind.RelativeOrAbsolute)
+                Label = "Matières",
+                NavigationType = typeof(PMatiere),
+                NavigationDestination = new Uri("Vues/PMatiere.xaml", UriKind.RelativeOrAbsolute)
             });
             this.Menu.Add(new MenuItem()
             {
                 Icon = new PackIconFontAwesome() { Kind = PackIconFontAwesomeKind.MarkerSolid },
-                Label = "User",
-                NavigationType = typeof(WNote),
-                NavigationDestination = new Uri("Vues/WNote.xaml", UriKind.RelativeOrAbsolute)
+                Label = "Notes",
+                NavigationType = typeof(PNote),
+                NavigationDestination = new Uri("Vues/PNote.xaml", UriKind.RelativeOrAbsolute)
             });
        
 
-            /* this.OptionsMenu.Add(new MenuItem()
+             this.OptionsMenu.Add(new MenuItem()
              {
-                 Icon = new PackIconFontAwesome() { Kind = PackIconFontAwesomeKind.CogsSolid },
-                 Label = "Settings",
-                 NavigationType = typeof(SettingsPage),
-                 NavigationDestination = new Uri("Views/SettingsPage.xaml", UriKind.RelativeOrAbsolute)
-             });
+                 Icon = new PackIconFontAwesome() { Kind = PackIconFontAwesomeKind.SaveSolid },
+                 Label = "Sauvegarde",
+                 NavigationType = typeof(PSauvegarde),
+                 NavigationDestination = new Uri("Vues/PSauvegarde.xaml", UriKind.RelativeOrAbsolute)
+             });/*
              this.OptionsMenu.Add(new MenuItem()
              {
                  Icon = new PackIconFontAwesome() { Kind = PackIconFontAwesomeKind.InfoCircleSolid },

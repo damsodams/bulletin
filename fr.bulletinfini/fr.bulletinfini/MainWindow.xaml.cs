@@ -28,7 +28,7 @@ namespace fr.bulletinfini
             this.HamburgerMenuControl.Content = this.navigationServiceEx.Frame;
 
             // Navigate to the home page.
-            this.Loaded += (sender, args) => this.navigationServiceEx.Navigate(new Uri("Vues/Home.xaml", UriKind.RelativeOrAbsolute));
+            this.Loaded += (sender, args) => this.navigationServiceEx.Navigate(new Uri("Vues/Test.xaml", UriKind.RelativeOrAbsolute));
         }
 
         private void HamburgerMenuControl_OnItemInvoked(object sender, HamburgerMenuItemInvokedEventArgs e)
