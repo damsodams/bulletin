@@ -9,21 +9,48 @@
                  Height="800"
                  WindowStartupLocation="CenterScreen"
                  mc:Ignorable="d">
-    <Grid Margin="10">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="10*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="8*"/>
         </Grid.RowDefinitions>
-        <Button Grid.Column="0" Grid.Row="0">
-            <Image Source="home.png" Stretch="Uniform"></Image>
-        </Button>
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0">Promotion :</Label>
+            <ComboBox x:Name="CBListePromotion" DisplayMemberPath="Intitule"  Grid.Column="1" Grid.Row="0"/>
+            <Label Grid.Row="0" Grid.Column="2">Matière :</Label>
+            <ComboBox x:Name="CBListeMatiere" DisplayMemberPath="Nom" Grid.Column="3" Grid.Row="0"/>
+
+            <Label Grid.Row="1" Grid.Column="0">Coef :</Label>
+            <TextBox Grid.Column="1" Grid.Row="1"/>
+            <Label Grid.Row="1" Grid.Column="2">Description de la note :</Label>
+            <TextBox Grid.Column="5" Grid.Row="1"/>
+        </Grid>
+        <DataGrid x:Name="TB_ListeEleve" AutoGenerateColumns="False" Grid.Column="1" Grid.Row="2" Margin="0,10,0,10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nom" Binding="{Binding Nom}" />
+                <DataGridTextColumn Header="Prenom" Binding="{Binding Prenom}" />
+                <DataGridTextColumn Header="Note"  />
+            </DataGrid.Columns>
+            <DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Note}" Margin="10" />
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>
+        </DataGrid>
     </Grid>
 </mah:MetroWindow>
