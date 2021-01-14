@@ -15,11 +15,11 @@ namespace Bulletinfini
         {
             InitializeComponent();
             List<Matiere> matiere = new List<Matiere>();
-            matiere.Add(new Matiere(1, "Java", "Matière"));
-            matiere.Add(new Matiere(2, "Anglais", "Matière"));
-            matiere.Add(new Matiere(3, "Management", "Matière"));
-            matiere.Add(new Matiere(4, "Réseaux", "Catégorie"));
-
+            matiere.Add(new Matiere( "Java", "Matière"));
+            matiere.Add(new Matiere( "Anglais", "Matière"));
+            matiere.Add(new Matiere( "Management", "Matière"));
+            matiere.Add(new Matiere( "Réseaux", "Catégorie"));
+     
             TableMatiere.ItemsSource = matiere;
         }
     }

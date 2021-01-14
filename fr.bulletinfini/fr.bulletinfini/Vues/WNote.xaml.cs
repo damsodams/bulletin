@@ -28,16 +28,16 @@ namespace fr.bulletinfini.Vues
             List<Promotion> promo = new List<Promotion>();
             List<Eleve> eleve = new List<Eleve>();
 
-            matiere.Add(new Matiere(1, "Java", "Matière"));
-            matiere.Add(new Matiere(2, "Anglais", "Matière"));
-            matiere.Add(new Matiere(3, "Management", "Matière"));
-            matiere.Add(new Matiere(4, "Réseaux", "Catégorie"));
+            matiere.Add(new Matiere( "Java", "Matière"));
+            matiere.Add(new Matiere( "Anglais", "Matière"));
+            matiere.Add(new Matiere( "Management", "Matière"));
+            matiere.Add(new Matiere( "Réseaux", "Catégorie"));
 
-            promo.Add(new Promotion(1, "ASI 2019-2021", "2019 - 2021"));
-            promo.Add(new Promotion(2, "ASI 2020-2022", "2020 - 2022"));
+         //   promo.Add(new Promotion(1, "ASI 2019-2021", "2019 - 2021"));
+           // promo.Add(new Promotion(2, "ASI 2020-2022", "2020 - 2022"));
 
-            eleve.Add(new Eleve(1, "PAYET", "Damien"));
-            eleve.Add(new Eleve(2, "PELLETIER", "Florent"));
+            eleve.Add(new Eleve( "PAYET", "Damien"));
+            eleve.Add(new Eleve( "PELLETIER", "Florent"));
 
             CBListeMatiere.ItemsSource = matiere;
             CBListePromotion.ItemsSource = promo;

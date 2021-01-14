@@ -6,8 +6,6 @@ namespace fr.bulletinfini.Classes
 {
     public class Promotion
     {
-        [JsonProperty("id")]
-        public int Id { get; set; }
 
         [JsonProperty("intitule")]
         public String Intitule { get; set; }
@@ -15,18 +13,19 @@ namespace fr.bulletinfini.Classes
         [JsonProperty("date")]
         public String Date { get; set; }
         [JsonProperty("matiere_promotions")]
-        public List<Matiere_Promotion> Matiere_Promotions { get; set; }
+        public List<Matiere> Matieres { get; set; }
 
         [JsonProperty("liste_eleves")]
         public List<Eleve> Eleves { get; set; }
 
-        public Promotion() { }
 
-        public Promotion(int id, string intitule, string date)
+        public Promotion() {
+            this.Eleves = new List<Eleve>();
+            this.Matieres = new List<Matiere>();
+        }
+        public Boolean write()
         {
-            Id = id;
-            Intitule = intitule;
-            Date = date;
+            return true;
         }
     }
 }

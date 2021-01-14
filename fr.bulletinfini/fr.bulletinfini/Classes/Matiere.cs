@@ -5,17 +5,19 @@ namespace fr.bulletinfini.Classes
 {
     public class Matiere
     {
-        [JsonProperty("id")]
-        public int Id { get; set; }
-        [JsonProperty("nom")]
+
         public string Nom { get; set; }
         [JsonProperty("type")]
         public string Type { get; set; }
-        [JsonProperty("matiere_promotions")]
-        public List<Matiere_Promotion> Matiere_promotions { get; set; }
-        public Matiere(int id, string nom, string type)
+        [JsonProperty("promotion")]
+        public Promotion Promotion{ get; set; }
+        [JsonProperty("list_notes")]
+        public List<Note> Notes { get; set; }
+        public Matiere() {
+            this.Notes = new List<Note>();
+        }
+        public Matiere(string nom, string type)
         {
-            Id = id;
             Nom = nom;
             Type = type;
         }

@@ -6,8 +6,6 @@ namespace fr.bulletinfini.Classes
 {
     public class Eleve
     {
-        [JsonProperty("id")]
-        public int Id { get; set; }
 
         [JsonProperty("nom")]
         public String Nom { get; set; }
@@ -20,11 +18,12 @@ namespace fr.bulletinfini.Classes
 
         [JsonProperty("notes_etudiant")]
         public List<Note> Notes { get; set; }
-        public Eleve() { }
+        public Eleve() {
+            this.Notes = new List<Note>();
+        }
 
-        public Eleve(int id, string nom, string prenom)
+        public Eleve( string nom, string prenom)
         {
-            Id = id;
             Nom = nom;
             Prenom = prenom;
         }

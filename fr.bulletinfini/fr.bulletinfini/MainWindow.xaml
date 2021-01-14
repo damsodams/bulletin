@@ -11,7 +11,7 @@
                  GlowBrush="{DynamicResource MahApps.Brushes.Accent}"
                  ResizeMode="CanResizeWithGrip"
                  WindowStartupLocation="CenterScreen"
-                 mc:Ignorable="d">
+                 mc:Ignorable="d" Loaded="WindowLoad">
     <mah:MetroWindow.LeftWindowCommands>
         <mah:WindowCommands>
             <Button x:Name="btn_addnewdatafile" ToolTip="Générer un nouveau fichier de donnée" Click="Click_GenerateNewFile">
